@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Wigipedia logo: a globe made of hair">
+  <defs>
+    <radialGradient id="g" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#fdf3fa"/>
+      <stop offset="60%" stop-color="#f3d9ec"/>
+      <stop offset="100%" stop-color="#e3b6d6"/>
+    </radialGradient>
+  </defs>
+  <!-- globe -->
+  <circle cx="100" cy="104" r="64" fill="url(#g)" stroke="#b5208a" stroke-width="2.5"/>
+  <!-- latitude lines -->
+  <g fill="none" stroke="#b5208a" stroke-width="1.4" opacity="0.55">
+    <path d="M40 86 q60 -22 120 0"/>
+    <path d="M37 104 h126"/>
+    <path d="M40 122 q60 22 120 0"/>
+    <path d="M52 64 q48 -16 96 0"/>
+    <path d="M52 144 q48 16 96 0"/>
+  </g>
+  <!-- longitude lines -->
+  <g fill="none" stroke="#b5208a" stroke-width="1.4" opacity="0.55">
+    <path d="M100 40 q-34 64 0 128"/>
+    <path d="M100 40 q34 64 0 128"/>
+    <path d="M100 40 v128"/>
+  </g>
+  <!-- hair strands flowing off the top of the globe (the gag) -->
+  <g fill="none" stroke="#7a1860" stroke-width="3" stroke-linecap="round">
+    <path d="M70 46 q-10 -26 8 -36 q14 -8 6 -10"/>
+    <path d="M88 40 q-4 -30 14 -38"/>
+    <path d="M108 39 q6 -28 -6 -40"/>
+    <path d="M128 47 q14 -22 -2 -38 q-12 -10 -2 -12"/>
+    <path d="M100 38 q0 -30 0 -34"/>
+  </g>
+</svg>

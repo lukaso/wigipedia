@@ -1,0 +1,32 @@
+---
+interface Row { label: string; value: string; }
+interface Props {
+  title: string;
+  caption?: string;
+  image?: string;
+  imageAlt?: string;
+  rows?: Row[];
+}
+const { title, caption, image, imageAlt, rows = [] } = Astro.props;
+---
+<aside class="wig-infobox">
+  <div class="ib-title">{title}</div>
+  {image && (
+    <figure>
+      <img src={image} alt={imageAlt ?? title} />
+      {caption && <figcaption set:html={caption} />}
+    </figure>
+  )}
+  {rows.length > 0 && (
+    <table>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row">{r.label}</th>
+            <td set:html={r.value} />
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+</aside>

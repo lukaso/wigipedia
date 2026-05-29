@@ -1,0 +1,16 @@
+# build output
+dist/
+# dependencies
+node_modules/
+# astro
+.astro/
+# env
+.env
+.env.production
+# macOS
+.DS_Store
+# logs
+npm-debug.log*
+# local preview screenshots / base64 scratch
+.preview/
+.gstack/

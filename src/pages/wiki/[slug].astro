@@ -1,0 +1,57 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Infobox from '../../components/Infobox.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, summary, categories, infobox, stub } = entry.data;
+---
+<Base title={title} description={summary}>
+  <div class="wig-tabs">
+    <span class="active">Article</span>
+    <a class="redlink" href="#">Talk</a>
+    <span style="margin-left:auto"></span>
+    <span class="active">Read</span>
+    <a class="redlink" href="#">Edit</a>
+    <a class="redlink" href="#">View history</a>
+  </div>
+
+  <h1 class="wig-title">{title}</h1>
+  <p class="wig-fromline">From Wigipedia, the free hair encyclopedia</p>
+
+  {infobox && (
+    <Infobox
+      title={title}
+      caption={infobox.caption}
+      image={infobox.image}
+      imageAlt={infobox.imageAlt}
+      rows={infobox.rows}
+    />
+  )}
+
+  <div class="wig-body">
+    {stub && (
+      <p class="wig-stub">
+        This hair-related article is a <strong>stub</strong>. You can help Wigipedia by
+        combing it out and making it longer.
+      </p>
+    )}
+    <Content />
+  </div>
+
+  {categories.length > 0 && (
+    <div class="wig-catbar">
+      <strong>Categories:</strong>
+      {categories.map((c) => <a class="redlink" href="#">{c}</a>)}
+    </div>
+  )}
+</Base>

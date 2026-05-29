@@ -1,0 +1,40 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+import '../styles/wigipedia.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'The free hair encyclopedia that anyone can comb.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>{title} — Wigipedia</title>
+  </head>
+  <body>
+    <div class="wig-shell">
+      <Sidebar />
+      <main class="wig-content">
+        <slot />
+      </main>
+      <footer class="wig-footer">
+        <p class="wig-disclaimer">
+          Wigipedia is a parody encyclopedia. Articles are quirky but aim to be mostly true;
+          treat the jokes as jokes and the facts as "[citation needed]". Wigipedia is not
+          affiliated with Wikipedia or the Wikimedia Foundation.
+        </p>
+        <p>
+          Text is original and available under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+          Built with Astro. © {new Date().getFullYear()} Wigipedia contributors.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

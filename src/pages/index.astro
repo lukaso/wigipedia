@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const articles = await getCollection('articles');
+const featured = articles.find((a) => a.data.featured) ?? articles[0];
+const rest = articles.filter((a) => a.id !== featured?.id);
+const count = articles.length;
+---
+<Base title="Main page" description="The free hair encyclopedia that anyone can comb.">
+  <h1 class="wig-title">Welcome to Wigipedia</h1>
+  <p class="wig-fromline">
+    the free hair encyclopedia that anyone can comb — {count} quirky-but-mostly-true articles and growing.
+  </p>
+
+  {featured && (
+    <section class="wig-hero">
+      <h2>Featured article</h2>
+      <p style="font-family: var(--wig-serif); font-size: 1.15rem; margin-bottom: 0.3rem;">
+        <a href={`/wiki/${featured.id}`}>{featured.data.title}</a>
+      </p>
+      <p>{featured.data.summary}</p>
+      <p><a href={`/wiki/${featured.id}`}>Read more →</a></p>
+    </section>
+  )}
+
+  <section style="margin-bottom: 1.25rem;">
+    <h2 style="font-family: var(--wig-serif); font-weight: normal; border-bottom: 1px solid var(--wig-border-light); padding-bottom: 0.2rem;">
+      Did you know…
+    </h2>
+    <ul>
+      <li>…that your hair does <strong>not</strong> keep growing after you die — it just looks that way?</li>
+      <li>…that the comb-over was a genuinely <strong>patented</strong> invention (US&nbsp;4,022,227)?</li>
+      <li>…that ancient Egyptians wore wigs over <strong>shaved heads</strong> to beat the heat and the lice?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 style="font-family: var(--wig-serif); font-weight: normal; border-bottom: 1px solid var(--wig-border-light); padding-bottom: 0.2rem;">
+      All articles
+    </h2>
+    <div class="wig-grid">
+      {articles.map((a) => (
+        <article class="wig-card">
+          <h3><a href={`/wiki/${a.id}`}>{a.data.title}</a></h3>
+          <p>{a.data.summary}</p>
+          {a.data.categories.length > 0 && (
+            <div class="wig-cats">{a.data.categories.join(' · ')}</div>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

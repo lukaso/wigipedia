@@ -1,0 +1,261 @@
+/* Wigipedia — styled to evoke a classic encyclopedia (MediaWiki Vector feel)
+   without copying any Wikimedia assets. All original CSS. */
+
+:root {
+  --wig-text: #202122;
+  --wig-link: #3366cc;
+  --wig-link-visited: #795cb2;
+  --wig-link-red: #ba0000;        /* "missing article" red links */
+  --wig-border: #a2a9b1;
+  --wig-border-light: #c8ccd1;
+  --wig-bg: #ffffff;
+  --wig-bg-soft: #f8f9fa;
+  --wig-bg-panel: #f6f6f6;
+  --wig-accent: #b5208a;          /* Wigipedia's own playful magenta */
+  --wig-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --wig-serif: "Georgia", "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+  margin: 0;
+  background: var(--wig-bg);
+  color: var(--wig-text);
+  font-family: var(--wig-sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+a { color: var(--wig-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:visited { color: var(--wig-link-visited); }
+a.redlink { color: var(--wig-link-red); }
+
+/* ---------- Page shell ---------- */
+.wig-shell {
+  display: grid;
+  grid-template-columns: 11.5rem minmax(0, 1fr);
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ---------- Sidebar ---------- */
+.wig-sidebar {
+  padding: 1rem 0.75rem 2rem 1rem;
+  font-size: 0.8rem;
+}
+.wig-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+.wig-logo:hover { text-decoration: none; }
+.wig-logo img { width: 8rem; height: auto; }
+.wig-logo .wig-wordmark {
+  font-family: var(--wig-serif);
+  font-size: 1.15rem;
+  color: var(--wig-text);
+  margin-top: 0.35rem;
+  letter-spacing: 0.5px;
+}
+.wig-logo .wig-tagline {
+  font-size: 0.62rem;
+  color: #54595d;
+  font-style: italic;
+}
+.wig-nav h4 {
+  font-size: 0.72rem;
+  font-weight: normal;
+  color: #54595d;
+  border-bottom: 1px solid var(--wig-border-light);
+  margin: 1.1rem 0 0.35rem;
+  padding-bottom: 0.15rem;
+  text-transform: none;
+}
+.wig-nav ul { list-style: none; margin: 0; padding: 0; }
+.wig-nav li { padding: 0.12rem 0; }
+
+/* ---------- Content column ---------- */
+.wig-content {
+  border-left: 1px solid var(--wig-border-light);
+  padding: 0.6rem 1.5rem 3rem;
+  min-height: 100vh;
+  background: var(--wig-bg);
+}
+
+/* article tabs (decorative) */
+.wig-tabs {
+  display: flex;
+  gap: 0.1rem;
+  font-size: 0.78rem;
+  border-bottom: 1px solid var(--wig-border);
+  margin-bottom: 0.9rem;
+}
+.wig-tabs span, .wig-tabs a {
+  padding: 0.35rem 0.7rem 0.3rem;
+  border: 1px solid var(--wig-border-light);
+  border-bottom: none;
+  background: var(--wig-bg-soft);
+  color: var(--wig-link);
+  position: relative;
+  top: 1px;
+}
+.wig-tabs .active {
+  background: var(--wig-bg);
+  color: var(--wig-text);
+  border-bottom: 1px solid var(--wig-bg);
+}
+
+/* article heading block */
+.wig-title {
+  font-family: var(--wig-serif);
+  font-weight: normal;
+  font-size: 1.85rem;
+  line-height: 1.25;
+  margin: 0 0 0.1rem;
+  border-bottom: 1px solid var(--wig-border);
+  padding-bottom: 0.25rem;
+}
+.wig-fromline {
+  font-size: 0.78rem;
+  color: #54595d;
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+
+/* article body */
+.wig-body { max-width: 52rem; }
+.wig-body h2 {
+  font-family: var(--wig-serif);
+  font-weight: normal;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--wig-border-light);
+  padding-bottom: 0.2rem;
+  margin: 1.4rem 0 0.6rem;
+}
+.wig-body h3 { font-size: 1.1rem; margin: 1.1rem 0 0.4rem; }
+.wig-body p { margin: 0.55rem 0; }
+.wig-body ul, .wig-body ol { margin: 0.5rem 0; padding-left: 1.6rem; }
+.wig-body li { margin: 0.2rem 0; }
+.wig-body blockquote {
+  border-left: 3px solid var(--wig-border);
+  margin: 0.8rem 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+  color: #3a3a3a;
+  font-style: italic;
+}
+.wig-body hr { border: none; border-top: 1px solid var(--wig-border-light); margin: 1.5rem 0; }
+
+/* "[citation needed]" gag */
+sup.cn a {
+  font-size: 0.72rem;
+  color: var(--wig-link);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* ---------- Infobox ---------- */
+.wig-infobox {
+  float: right;
+  width: 22rem;
+  max-width: 45%;
+  margin: 0 0 1rem 1.4rem;
+  border: 1px solid var(--wig-border);
+  background: var(--wig-bg-soft);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+.wig-infobox .ib-title {
+  background: #eaecf0;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--wig-border);
+}
+.wig-infobox figure { margin: 0; padding: 0.6rem 0.6rem 0.2rem; text-align: center; }
+.wig-infobox img { width: 100%; height: auto; border: 1px solid var(--wig-border-light); }
+.wig-infobox figcaption { font-size: 0.74rem; color: #54595d; padding: 0.35rem 0.3rem 0; }
+.wig-infobox table { width: 100%; border-collapse: collapse; }
+.wig-infobox th, .wig-infobox td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.35rem 0.6rem;
+  border-top: 1px solid var(--wig-border-light);
+}
+.wig-infobox th { width: 40%; color: #54595d; font-weight: bold; }
+
+/* ---------- Home page ---------- */
+.wig-hero {
+  border: 1px solid var(--wig-border-light);
+  background: var(--wig-bg-soft);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.wig-hero h2 { margin-top: 0; }
+.wig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.9rem;
+}
+.wig-card {
+  border: 1px solid var(--wig-border-light);
+  padding: 0.75rem 0.9rem;
+  background: var(--wig-bg);
+}
+.wig-card h3 { margin: 0 0 0.3rem; font-family: var(--wig-serif); font-weight: normal; }
+.wig-card p { margin: 0; font-size: 0.82rem; color: #333; }
+.wig-cats { margin-top: 0.4rem; font-size: 0.72rem; color: #72777d; }
+
+/* category line at bottom of an article */
+.wig-catbar {
+  margin-top: 2rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--wig-border-light);
+  background: var(--wig-bg-soft);
+  font-size: 0.8rem;
+}
+.wig-catbar a { margin-right: 0.4rem; }
+
+/* stub notice */
+.wig-stub {
+  border: 1px solid #c8ccd1;
+  background: #f8f9fa;
+  padding: 0.6rem 0.8rem;
+  font-style: italic;
+  font-size: 0.82rem;
+  margin: 1rem 0;
+}
+
+/* ---------- Footer ---------- */
+.wig-footer {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--wig-border-light);
+  margin-top: 2rem;
+  padding: 1rem 1.5rem 2.5rem;
+  font-size: 0.74rem;
+  color: #54595d;
+}
+.wig-footer .wig-disclaimer { font-style: italic; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+  .wig-shell { grid-template-columns: 1fr; }
+  .wig-sidebar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--wig-border-light);
+  }
+  .wig-logo { flex-direction: row; gap: 0.5rem; margin-bottom: 0; }
+  .wig-logo img { width: 3rem; }
+  .wig-nav { display: none; }
+  .wig-content { border-left: none; padding: 0.8rem 1rem 3rem; }
+  .wig-infobox { float: none; width: 100%; max-width: 100%; margin: 0 0 1rem; }
+}
