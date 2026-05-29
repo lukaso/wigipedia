@@ -54,8 +54,8 @@ behind, mimicking overnight whitening. The full story is in
 For most of medical history there was no reliable treatment — just steroids, patience, and
 wigs. That changed in **June 2022**, when the JAK inhibitor **baricitinib** became the first
 systemic drug ever approved specifically for severe alopecia areata, with a meaningful share of
-patients regrowing most of their scalp hair. A second drug, **ritlecitinib**, followed in 2023
-and was the first approved down to age 12.
+patients regrowing most of their scalp hair.[^baricitinib] A second drug, **ritlecitinib**,
+followed in 2023 and was the first approved down to age 12.[^ritlecitinib]
 
 Public awareness of the condition rose sharply in the early 2020s after it became the subject
 of a very high-profile awards-show moment — proof that even a quiet autoimmune condition can
@@ -66,3 +66,6 @@ end up in the headlines.
 - [Alopecia](/wiki/alopecia) (the umbrella term)
 - [Why hair turns gray](/wiki/why-hair-turns-gray)
 - [Keratin](/wiki/keratin)
+
+[^baricitinib]: King B, Ohyama M, Kwon O, et al. (BRAVE-AA Investigators). "Two Phase 3 Trials of Baricitinib for Alopecia Areata." *New England Journal of Medicine* 386(18), 1687–1699 (2022). DOI [10.1056/NEJMoa2110343](https://www.nejm.org/doi/full/10.1056/NEJMoa2110343). Baricitinib (Olumiant) was FDA-approved for severe alopecia areata on 13 June 2022.
+[^ritlecitinib]: "FDA approves second Yale-researched treatment for alopecia areata." Yale News, 26 June 2023. [news.yale.edu](https://news.yale.edu/2023/06/26/fda-approves-second-yale-researched-treatment-alopecia-areata). (Ritlecitinib, brand name Litfulo, for ages 12 and up.)

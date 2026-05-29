@@ -31,7 +31,7 @@ pepper, not a third blended seasoning.
 
 There is also a chemistry angle. Follicles naturally produce a little hydrogen peroxide, and
 young follicles mop it up with an enzyme called catalase. As catalase declines with age, the
-peroxide accumulates and effectively **bleaches the hair from the inside** — so hair is not
+peroxide accumulates and effectively **bleaches the hair from the inside**[^peroxide] — so hair is not
 just losing color, it is being mildly de-colored by its own plumbing.
 
 ## The overnight myth
@@ -50,7 +50,7 @@ creating the impression of overnight change. Fast, yes. Overnight repainting, no
 
 A little. A 2020 study found that intense stress can drive the sympathetic nervous system to
 burn through the follicle's melanocyte stem cells, and — at least in mice — some of the change
-reversed when the stress stopped. So stress can nudge the timeline. Your genes and your
+reversed when the stress stopped.[^stress] So stress can nudge the timeline. Your genes and your
 birthday still do most of the work.
 
 ## See also
@@ -58,3 +58,6 @@ birthday still do most of the work.
 - [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
 - [World's longest hair](/wiki/worlds-longest-hair)
 - [Melanin](/wiki/melanin)
+
+[^stress]: Zhang B, Ma S, Rachmin I, et al. "Hyperactivation of sympathetic nerves drives depletion of melanocyte stem cells." *Nature* 577, 676–681 (2020). DOI [10.1038/s41586-020-1935-3](https://www.nature.com/articles/s41586-020-1935-3). (Ya-Chieh Hsu lab, Harvard.)
+[^peroxide]: Wood JM, Decker H, Hartmann H, et al. "Senile hair graying: H2O2-mediated oxidative stress affects human hair color by blunting methionine sulfoxide repair." *FASEB Journal* 23(7), 2065–2075 (2009). DOI [10.1096/fj.08-125435](https://faseb.onlinelibrary.wiley.com/doi/abs/10.1096/fj.08-125435).

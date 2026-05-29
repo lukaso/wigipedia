@@ -11,9 +11,10 @@ const EXISTING = new Set(
     .map((f) => f.replace(/\.md$/, '')),
 );
 
-// rehype plugin: any <a href="/wiki/slug"> whose slug has no article file gets
-// class="redlink". A missing target lands on the 404 "create this article" page.
-function rehypeRedlinks() {
+// rehype plugin: (1) any <a href="/wiki/slug"> whose slug has no article file gets
+// class="redlink" (lands on the 404 "create this article" page); (2) relabel the
+// GFM footnotes heading from "Footnotes" to "References".
+function rehypeWigiLinks() {
   return (tree) => {
     const walk = (node) => {
       if (node.type === 'element' && node.tagName === 'a' && node.properties) {
@@ -28,6 +29,14 @@ function rehypeRedlinks() {
           }
         }
       }
+      if (
+        node.type === 'element' &&
+        node.tagName === 'h2' &&
+        node.properties &&
+        String(node.properties.id || '').includes('footnote-label')
+      ) {
+        node.children = [{ type: 'text', value: 'References' }];
+      }
       if (node.children) node.children.forEach(walk);
     };
     walk(tree);
@@ -38,6 +47,6 @@ export default defineConfig({
   site: 'https://wigipedia.io',
   output: 'static',
   markdown: {
-    rehypePlugins: [rehypeRedlinks],
+    rehypePlugins: [rehypeWigiLinks],
   },
 });

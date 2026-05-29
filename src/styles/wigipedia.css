@@ -166,6 +166,31 @@ a.redlink { color: var(--wig-link-red); }
 }
 .wig-body hr { border: none; border-top: 1px solid var(--wig-border-light); margin: 1.5rem 0; }
 
+/* References (GFM footnotes), styled like a real wiki reference list */
+.wig-body section[data-footnotes] {
+  margin-top: 2rem;
+  border-top: 1px solid var(--wig-border-light);
+  font-size: 0.8rem;
+  color: #3a3a3a;
+}
+.wig-body section[data-footnotes] h2 {
+  font-family: var(--wig-serif);
+  font-weight: normal;
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--wig-border-light);
+  padding-bottom: 0.2rem;
+  margin: 0 0 0.6rem;
+}
+.wig-body section[data-footnotes] ol { padding-left: 1.4rem; }
+.wig-body section[data-footnotes] li { margin: 0.3rem 0; }
+.wig-body [data-footnote-ref] {
+  font-size: 0.72rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 0.1rem;
+}
+.wig-body [data-footnote-backref] { text-decoration: none; margin-left: 0.25rem; }
+
 /* "[citation needed]" gag */
 sup.cn a {
   font-size: 0.72rem;
