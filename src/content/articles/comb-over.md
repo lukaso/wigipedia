@@ -59,11 +59,11 @@ only at one end, the structure depends entirely on stillness — of the air, and
 Wind is its natural predator. Rain is worse.
 
 For a more permanent solution, the field generally points toward the
-<a href="/wiki/history-of-the-toupee">toupée</a> or a hair transplant, both of which add
+[toupée](/wiki/history-of-the-toupee) or a hair transplant, both of which add
 hair rather than redeploy it.
 
 ## See also
 
-- History of the <a href="/wiki/history-of-the-toupee">toupée</a>
-- <a href="/wiki/do-hair-and-nails-grow-after-death">Do hair and nails grow after death?</a>
-- <a class="redlink" href="#">Ig Nobel Prize</a>
+- History of the [toupée](/wiki/history-of-the-toupee)
+- [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
+- [Ig Nobel Prize](/wiki/ig-nobel-prize)

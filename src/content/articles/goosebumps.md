@@ -45,7 +45,7 @@ bottlebrush tail and a bristling dog's hackles are piloerection put to work.
 We kept the wiring but lost most of the fur, so on a human the whole apparatus fluffs up almost
 nothing. Goosebumps are a textbook **vestigial reflex** — a leftover from hairier ancestors,
 much like the muscles that let some people wiggle their ears, or the faint relic of
-<a href="/wiki/whiskers">whiskers</a>.
+[whiskers](/wiki/whiskers).
 
 Curiously, the same little muscles may not be entirely useless: research has found that the
 arrector pili and its nerve help maintain the stem cells that regenerate the hair follicle. So
@@ -54,6 +54,6 @@ growing.
 
 ## See also
 
-- <a href="/wiki/whiskers">Whiskers (vibrissae)</a>
-- <a href="/wiki/why-hair-turns-gray">Why hair turns gray</a>
-- <a class="redlink" href="#">Arrector pili</a>
+- [Whiskers (vibrissae)](/wiki/whiskers)
+- [Why hair turns gray](/wiki/why-hair-turns-gray)
+- [Arrector pili](/wiki/arrector-pili)

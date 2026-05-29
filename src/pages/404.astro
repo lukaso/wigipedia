@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+const newBase = `${SITE.repo}/new/${SITE.branch}/${SITE.contentDir}`;
+---
+<Base title="Article not found" description="This Wigipedia article doesn't exist yet.">
+  <h1 class="wig-title" id="title">Article not found</h1>
+  <p class="wig-fromline">From Wigipedia, the free hair encyclopedia</p>
+  <div class="wig-body">
+    <div id="missing-article" hidden>
+      <p>
+        Wigipedia does not have an article titled <strong id="want"></strong> yet.
+        That link is a <span class="redlink">red link</span> — it points at an article
+        nobody has combed out so far.
+      </p>
+      <p>
+        Want to write it? Wigipedia is edited through GitHub pull requests.
+      </p>
+      <p>
+        <a id="create" class="wig-button" href={newBase}>Create this article on GitHub →</a>
+      </p>
+      <p style="margin-top:1rem;">
+        Or <a id="searchlink" href="/search">search for it</a>,
+        read the <a href={`${SITE.repo}/blob/${SITE.branch}/CONTRIBUTING.md`}>contributing guide</a>,
+        or go back to the <a href="/">main page</a>.
+      </p>
+    </div>
+    <div id="generic-404" hidden>
+      <p>That page doesn't exist. Try the <a href="/">main page</a> or
+      <a href="/search">search</a>.</p>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ newBase }}>
+    (function () {
+      const path = location.pathname;
+      const m = path.match(/^\/wiki\/([^/]+)\/?$/);
+      const missing = document.getElementById('missing-article');
+      const generic = document.getElementById('generic-404');
+      if (m) {
+        const slug = decodeURIComponent(m[1]);
+        const title = slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+        document.getElementById('title').textContent = title;
+        document.title = title + ' — Wigipedia';
+        document.getElementById('want').textContent = '“' + title + '”';
+        document.getElementById('create').href =
+          newBase + '?filename=' + encodeURIComponent(slug + '.md');
+        document.getElementById('searchlink').href = '/search?q=' + encodeURIComponent(title);
+        missing.hidden = false;
+      } else {
+        generic.hidden = false;
+      }
+    })();
+  </script>
+</Base>

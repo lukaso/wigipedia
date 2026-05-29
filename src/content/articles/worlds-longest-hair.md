@@ -50,6 +50,6 @@ follicle scheduling.
 
 ## See also
 
-- <a href="/wiki/why-hair-turns-gray">Why hair turns gray</a>
-- <a href="/wiki/do-hair-and-nails-grow-after-death">Do hair and nails grow after death?</a>
-- <a class="redlink" href="#">Hair growth cycle</a>
+- [Why hair turns gray](/wiki/why-hair-turns-gray)
+- [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
+- [Hair growth cycle](/wiki/hair-growth-cycle)

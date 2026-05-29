@@ -33,6 +33,17 @@ export function imgSrcs(html) {
   return [...html.matchAll(/<img[^>]*\ssrc="([^"]*)"/g)].map((m) => m[1]);
 }
 
+// Parse anchor tags into { href, isRedlink }. Red links intentionally point at
+// articles that don't exist yet, so link-resolution checks should skip them.
+export function anchors(html) {
+  return [...html.matchAll(/<a\b([^>]*)>/g)].map((m) => {
+    const attrs = m[1];
+    const href = (attrs.match(/\shref="([^"]*)"/) || [])[1] ?? '';
+    const cls = (attrs.match(/\sclass="([^"]*)"/) || [])[1] ?? '';
+    return { href, isRedlink: /\bredlink\b/.test(cls) };
+  });
+}
+
 // Resolve a site-absolute path ("/wiki/x") to a file in dist, trying the common
 // static-site shapes. Returns the resolved path or null.
 export function resolveInDist(p) {

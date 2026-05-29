@@ -236,6 +236,17 @@ sup.cn a {
 }
 .wig-catbar a { margin-right: 0.4rem; }
 
+/* call-to-action button (e.g. "create this article") */
+.wig-button {
+  display: inline-block;
+  background: var(--wig-accent);
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.wig-button:hover { background: #94176f; text-decoration: none; color: #fff; }
+
 /* stub notice */
 .wig-stub {
   border: 1px solid #c8ccd1;

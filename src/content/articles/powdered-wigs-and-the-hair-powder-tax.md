@@ -54,6 +54,6 @@ paid it, and it was finally repealed in **1861**.
 
 ## See also
 
-- History of the <a href="/wiki/history-of-the-toupee">toupée</a>
-- The <a href="/wiki/comb-over">comb-over</a>
-- <a class="redlink" href="#">Periwig</a>
+- History of the [toupée](/wiki/history-of-the-toupee)
+- The [comb-over](/wiki/comb-over)
+- [Periwig](/wiki/periwig)

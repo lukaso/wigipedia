@@ -56,6 +56,6 @@ plain one: **similar is not the same**, and a confident expert is not a measurem
 
 ## See also
 
-- <a href="/wiki/do-hair-and-nails-grow-after-death">Do hair and nails grow after death?</a>
-- <a class="redlink" href="#">Mitochondrial DNA</a>
-- <a class="redlink" href="#">Keratin</a>
+- [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
+- [Mitochondrial DNA](/wiki/mitochondrial-dna)
+- [Keratin](/wiki/keratin)

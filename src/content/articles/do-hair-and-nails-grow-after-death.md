@@ -61,6 +61,6 @@ arithmetic.
 
 ## See also
 
-- History of the <a href="/wiki/history-of-the-toupee">toupée</a>
-- The <a href="/wiki/comb-over">comb-over</a>
-- <a class="redlink" href="#">Keratin</a> (the stuff that does not, in fact, grow on you postmortem)
+- History of the [toupée](/wiki/history-of-the-toupee)
+- The [comb-over](/wiki/comb-over)
+- [Keratin](/wiki/keratin) (the stuff that does not, in fact, grow on you postmortem)

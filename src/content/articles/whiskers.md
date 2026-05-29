@@ -51,10 +51,10 @@ whiskers that can track the **hydrodynamic trail** left by a fish that swam past
 earlier — following a meal through murky water by feeling its wake.
 
 Humans, alas, lost theirs. We keep only the faint vestigial muscles where vibrissae once
-twitched — another small souvenir of a furrier past, much like <a href="/wiki/goosebumps">goosebumps</a>.
+twitched — another small souvenir of a furrier past, much like [goosebumps](/wiki/goosebumps).
 
 ## See also
 
-- <a href="/wiki/goosebumps">Goosebumps</a>
-- <a class="redlink" href="#">Fur</a>
-- <a class="redlink" href="#">Follicle-sinus complex</a>
+- [Goosebumps](/wiki/goosebumps)
+- [Fur](/wiki/fur)
+- [Follicle-sinus complex](/wiki/follicle-sinus-complex)

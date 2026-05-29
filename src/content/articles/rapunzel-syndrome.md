@@ -57,6 +57,6 @@ treating the underlying compulsion — otherwise the tower simply grows a new br
 
 ## See also
 
-- <a href="/wiki/do-hair-and-nails-grow-after-death">Do hair and nails grow after death?</a>
-- <a class="redlink" href="#">Keratin</a>, the protein that refuses to be digested
-- <a class="redlink" href="#">Trichotillomania</a>
+- [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
+- [Keratin](/wiki/keratin), the protein that refuses to be digested
+- [Trichotillomania](/wiki/trichotillomania)

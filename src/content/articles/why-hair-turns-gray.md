@@ -55,6 +55,6 @@ birthday still do most of the work.
 
 ## See also
 
-- <a href="/wiki/do-hair-and-nails-grow-after-death">Do hair and nails grow after death?</a>
-- <a href="/wiki/worlds-longest-hair">World's longest hair</a>
-- <a class="redlink" href="#">Melanin</a>
+- [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
+- [World's longest hair](/wiki/worlds-longest-hair)
+- [Melanin](/wiki/melanin)

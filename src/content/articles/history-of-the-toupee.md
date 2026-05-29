@@ -45,7 +45,7 @@ fashionable hair a literal trophy.
 Roman baldness was a sensitive subject at the highest level. Julius Caesar was famously
 self-conscious about his thinning hair, and ancient sources report he combed it forward and
 welcomed any excuse to wear his laurel wreath — arguably history's most prestigious
-<a href="/wiki/comb-over">comb-over</a>.
+[comb-over](/wiki/comb-over).
 
 ## The age of the big wig
 
@@ -71,6 +71,6 @@ along.
 
 ## See also
 
-- The <a href="/wiki/comb-over">comb-over</a>, the toupée's commitment-free cousin
-- <a href="/wiki/do-hair-and-nails-grow-after-death">Do hair and nails grow after death?</a>
-- <a class="redlink" href="#">Powdered wigs and the wig tax</a>
+- The [comb-over](/wiki/comb-over), the toupée's commitment-free cousin
+- [Do hair and nails grow after death?](/wiki/do-hair-and-nails-grow-after-death)
+- [Powdered wigs and the wig tax](/wiki/powdered-wigs-and-the-hair-powder-tax)
