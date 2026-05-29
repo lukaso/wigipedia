@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { groupByCategory } from '../../lib/slug';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return groupByCategory(articles).map((group) => ({
+    params: { slug: group.slug },
+    props: { group },
+  }));
+}
+
+const { group } = Astro.props;
+const sorted = [...group.articles].sort((a, b) =>
+  a.data.title.localeCompare(b.data.title),
+);
+---
+<Base title={`Category: ${group.name}`} description={`Wigipedia articles in ${group.name}.`}>
+  <h1 class="wig-title">Category: {group.name}</h1>
+  <p class="wig-fromline">
+    {sorted.length} article{sorted.length === 1 ? '' : 's'} in this category.
+  </p>
+  <div class="wig-body">
+    <ul>
+      {sorted.map((a) => (
+        <li><a href={`/wiki/${a.id}`}>{a.data.title}</a> — {a.data.summary}</li>
+      ))}
+    </ul>
+    <p style="margin-top:1.5rem;"><a href="/categories">← All categories</a></p>
+  </div>
+</Base>

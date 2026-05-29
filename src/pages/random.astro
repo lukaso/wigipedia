@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const articles = await getCollection('articles');
+const slugs = articles.map((a) => a.id);
+---
+<Base title="Random article" description="Jump to a random Wigipedia article.">
+  <h1 class="wig-title">Random article</h1>
+  <p class="wig-fromline">Combing you somewhere at random…</p>
+  <div class="wig-body">
+    <p>If you are not redirected, <a id="fallback" href={`/wiki/${slugs[0]}`}>pick one here</a>.</p>
+  </div>
+  <script is:inline define:vars={{ slugs }}>
+    const pick = slugs[Math.floor(Math.random() * slugs.length)];
+    window.location.replace('/wiki/' + pick);
+  </script>
+</Base>

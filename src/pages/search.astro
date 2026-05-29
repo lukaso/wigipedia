@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+// Pagefind assets live at /pagefind/* and are produced by the `pagefind` step
+// that runs after `astro build`. They do not exist during `astro dev`, so search
+// only works in a built/preview/production site.
+---
+<Base title="Search" description="Search Wigipedia.">
+  <h1 class="wig-title">Search Wigipedia</h1>
+  <p class="wig-fromline">Find an article by combing through the index.</p>
+  <div class="wig-body">
+    <div id="search"></div>
+    <noscript><p>Search needs JavaScript enabled.</p></noscript>
+  </div>
+
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    function startSearch() {
+      if (typeof PagefindUI === 'undefined') { setTimeout(startSearch, 50); return; }
+      const ui = new PagefindUI({ element: '#search', showImages: false, showSubResults: true });
+      const q = new URLSearchParams(location.search).get('q');
+      if (q) {
+        const input = document.querySelector('#search input');
+        if (input) { input.value = q; input.dispatchEvent(new Event('input', { bubbles: true })); }
+      }
+    }
+    document.addEventListener('DOMContentLoaded', startSearch);
+  </script>
+  <style is:global>
+    :root {
+      --pagefind-ui-primary: var(--wig-accent);
+      --pagefind-ui-font: var(--wig-sans);
+      --pagefind-ui-border-radius: 4px;
+    }
+    #search { max-width: 40rem; }
+  </style>
+</Base>

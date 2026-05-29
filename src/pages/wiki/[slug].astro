@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Infobox from '../../components/Infobox.astro';
+import { SITE, editUrl, historyUrl } from '../../lib/site';
+import { slugifyCategory } from '../../lib/slug';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -18,15 +20,12 @@ const { title, summary, categories, infobox, stub } = entry.data;
 <Base title={title} description={summary}>
   <div class="wig-tabs">
     <span class="active">Article</span>
-    <a class="redlink" href="#">Talk</a>
+    <a href={`${SITE.repo}/issues`} target="_blank" rel="noopener">Talk</a>
     <span style="margin-left:auto"></span>
     <span class="active">Read</span>
-    <a class="redlink" href="#">Edit</a>
-    <a class="redlink" href="#">View history</a>
+    <a href={editUrl(entry.id)} target="_blank" rel="noopener">Edit on GitHub</a>
+    <a href={historyUrl(entry.id)} target="_blank" rel="noopener">View history</a>
   </div>
-
-  <h1 class="wig-title">{title}</h1>
-  <p class="wig-fromline">From Wigipedia, the free hair encyclopedia</p>
 
   {infobox && (
     <Infobox
@@ -38,20 +37,24 @@ const { title, summary, categories, infobox, stub } = entry.data;
     />
   )}
 
-  <div class="wig-body">
-    {stub && (
-      <p class="wig-stub">
-        This hair-related article is a <strong>stub</strong>. You can help Wigipedia by
-        combing it out and making it longer.
-      </p>
-    )}
-    <Content />
+  <div data-pagefind-body>
+    <h1 class="wig-title" data-pagefind-meta="title">{title}</h1>
+    <p class="wig-fromline">From Wigipedia, the free hair encyclopedia</p>
+    <div class="wig-body">
+      {stub && (
+        <p class="wig-stub">
+          This hair-related article is a <strong>stub</strong>. You can help Wigipedia by
+          combing it out and making it longer.
+        </p>
+      )}
+      <Content />
+    </div>
   </div>
 
   {categories.length > 0 && (
     <div class="wig-catbar">
       <strong>Categories:</strong>
-      {categories.map((c) => <a class="redlink" href="#">{c}</a>)}
+      {categories.map((c) => <a href={`/category/${slugifyCategory(c)}`}>{c}</a>)}
     </div>
   )}
 </Base>

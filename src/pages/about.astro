@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+---
+<Base title="About Wigipedia" description="What Wigipedia is, and what it is not.">
+  <h1 class="wig-title">About Wigipedia</h1>
+  <p class="wig-fromline">From Wigipedia, the free hair encyclopedia</p>
+  <div class="wig-body">
+    <p>
+      <strong>Wigipedia</strong> is a small, free encyclopedia about hair, wigs, and (a little)
+      fur. It looks and reads like a real encyclopedia because, mostly, it is one: the articles
+      aim to be <em>quirky but true</em> — genuinely interesting, occasionally strange, and
+      checked against reality — just told with a lighter touch than the usual reference work.
+    </p>
+
+    <h2>What Wigipedia is not</h2>
+    <p>
+      It is not Wikipedia, and it is not affiliated with the Wikimedia Foundation. It is a
+      parody in <em>tone</em>, not in facts. When you see a <sup class="cn"><a href="#">[citation needed]</a></sup>
+      gag, that is a joke about encyclopedias, not a warning that the surrounding sentence is
+      made up. Where a specific claim is checkable — a date, a name, a patent number — we try to
+      get it right.
+    </p>
+
+    <h2>How it's made</h2>
+    <p>
+      Wigipedia is an open-source static site built with <a href="https://astro.build">Astro</a>
+      and hosted on Cloudflare Pages. Every article is a Markdown file in the
+      <a href={SITE.repo}>public repository</a>.
+    </p>
+
+    <h2>How to contribute</h2>
+    <p>
+      There is no in-browser editor yet — editing happens through <strong>GitHub pull
+      requests</strong>. Use the “Edit on GitHub” link at the top of any article, or read the
+      <a href={`${SITE.repo}/blob/${SITE.branch}/CONTRIBUTING.md`}>contributing guide</a> to add
+      a new one. Article text and original images are licensed
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; the code is MIT.
+    </p>
+
+    <h2>The rules of the comb</h2>
+    <ul>
+      <li>Real subjects, surprising real facts.</li>
+      <li>No copyrighted text or images — original or AI-generated only.</li>
+      <li>Cross-link generously. A wiki is a web, not a list.</li>
+      <li>Keep it fun.</li>
+    </ul>
+  </div>
+</Base>

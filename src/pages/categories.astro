@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { groupByCategory } from '../lib/slug';
+
+const articles = await getCollection('articles');
+const groups = groupByCategory(articles);
+---
+<Base title="Categories" description="Browse Wigipedia by category.">
+  <h1 class="wig-title">Categories</h1>
+  <p class="wig-fromline">All {groups.length} categories on Wigipedia.</p>
+  <div class="wig-body">
+    <ul>
+      {groups.map((g) => (
+        <li>
+          <a href={`/category/${g.slug}`}>{g.name}</a>
+          <span style="color:#72777d;"> ({g.articles.length})</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

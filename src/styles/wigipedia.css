@@ -69,6 +69,20 @@ a.redlink { color: var(--wig-link-red); }
   color: #54595d;
   font-style: italic;
 }
+.wig-search { margin: 0 0 1rem; }
+.wig-search input {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--wig-border);
+  border-radius: 3px;
+  background: #fff;
+}
+.wig-search input:focus {
+  outline: none;
+  border-color: var(--wig-accent);
+  box-shadow: 0 0 0 2px rgba(181, 32, 138, 0.15);
+}
 .wig-nav h4 {
   font-size: 0.72rem;
   font-weight: normal;

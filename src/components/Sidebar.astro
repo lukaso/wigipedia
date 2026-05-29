@@ -1,32 +1,43 @@
 ---
-// Left sidebar: logo + nav, MediaWiki-Vector style. Links are mostly decorative
-// for the spike (no search / random / about pages yet).
+import { getCollection } from 'astro:content';
+import { groupByCategory } from '../lib/slug';
+import { SITE } from '../lib/site';
+
+// Show the busiest handful of categories in the sidebar.
+const articles = await getCollection('articles');
+const topCategories = groupByCategory(articles)
+  .sort((a, b) => b.articles.length - a.articles.length)
+  .slice(0, 6);
 ---
 <aside class="wig-sidebar">
   <a href="/" class="wig-logo">
-    <img src="/logo.svg" alt="Wigipedia logo" />
+    <img src="/logo.png" alt="Wigipedia logo" />
     <span class="wig-wordmark">Wigipedia</span>
     <span class="wig-tagline">The Free Hair Encyclopedia</span>
   </a>
+  <form class="wig-search" action="/search" method="get" role="search">
+    <input type="search" name="q" placeholder="Search Wigipedia" aria-label="Search Wigipedia" />
+  </form>
   <nav class="wig-nav">
     <h4>Navigation</h4>
     <ul>
       <li><a href="/">Main page</a></li>
-      <li><a href="/" >Featured article</a></li>
-      <li><a class="redlink" href="#">Random article</a></li>
-      <li><a class="redlink" href="#">Recent changes</a></li>
+      <li><a href="/random">Random article</a></li>
+      <li><a href="/categories">Categories</a></li>
+      <li><a href="/search">Search</a></li>
+      <li><a href={`${SITE.repo}/commits/${SITE.branch}`}>Recent changes</a></li>
     </ul>
-    <h4>Hair &amp; co.</h4>
+    <h4>Browse</h4>
     <ul>
-      <li><a class="redlink" href="#">Hairstyles</a></li>
-      <li><a class="redlink" href="#">Wigs &amp; toupées</a></li>
-      <li><a class="redlink" href="#">Hair biology</a></li>
-      <li><a class="redlink" href="#">Fur</a></li>
+      {topCategories.map((c) => (
+        <li><a href={`/category/${c.slug}`}>{c.name}</a></li>
+      ))}
     </ul>
     <h4>Contribute</h4>
     <ul>
-      <li><a class="redlink" href="#">How to edit</a></li>
-      <li><a class="redlink" href="#">Search</a></li>
+      <li><a href={`${SITE.repo}/blob/${SITE.branch}/CONTRIBUTING.md`}>How to edit</a></li>
+      <li><a href={SITE.repo}>Source on GitHub</a></li>
+      <li><a href="/about">About</a></li>
     </ul>
   </nav>
 </aside>
