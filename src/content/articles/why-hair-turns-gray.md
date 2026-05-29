@@ -43,7 +43,7 @@ execution in 1793 — the legend even lent its name to **Marie Antoinette syndro
 The trouble is arithmetic again: the visible part of a hair is dead, finished material, and
 nothing that happens to your nerves can repaint it. A strand that grew in brown stays brown.
 What *can* happen quickly is a sudden, patchy loss of the *pigmented* hairs (as in some forms
-of the autoimmune condition alopecia areata), leaving the already-white ones behind and
+of the autoimmune condition [alopecia areata](/wiki/alopecia-areata)), leaving the already-white ones behind and
 creating the impression of overnight change. Fast, yes. Overnight repainting, no.
 
 ## Does stress count?
