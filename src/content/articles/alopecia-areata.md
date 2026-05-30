@@ -119,9 +119,12 @@ patients regrowing most of their scalp hair.[^baricitinib] A second drug, **ritl
 followed in 2023 and was the first approved down to age 12.[^ritlecitinib] Both work by jamming
 exactly the JAK relay described above — the lab insight from 2014, arriving in the pharmacy.
 
-Public awareness of the condition rose sharply in the early 2020s after it became the subject
-of a very high-profile awards-show moment — proof that even a quiet autoimmune condition can
-end up in the headlines.
+Public awareness of the condition also jumped in **2022**, at the **Academy Awards**. Presenter
+Chris Rock made a joke about actress **Jada Pinkett Smith's** shaved head — she had spoken
+publicly about living with alopecia areata — and her husband, Will Smith, walked on stage and
+slapped him. The moment dominated headlines for weeks and sent a great many people searching for
+what alopecia areata actually is.[^oscars] Proof that even a quiet autoimmune condition can end
+up, abruptly, in the headlines.
 
 ## See also
 
@@ -136,3 +139,4 @@ end up in the headlines.
 [^okhovat]: Okhovat J-P, Marks DH, Manatis-Lornell A, Hagigeorges D, Locascio JJ, Senna MM. "Association between alopecia areata, anxiety, and depression: A systematic review and meta-analysis." *Journal of the American Academy of Dermatology* (2019). [PubMed 31163237](https://pubmed.ncbi.nlm.nih.gov/31163237/).
 [^baricitinib]: King B, Ohyama M, Kwon O, et al. (BRAVE-AA Investigators). "Two Phase 3 Trials of Baricitinib for Alopecia Areata." *New England Journal of Medicine* 386(18), 1687–1699 (2022). DOI [10.1056/NEJMoa2110343](https://www.nejm.org/doi/full/10.1056/NEJMoa2110343). Baricitinib (Olumiant) was FDA-approved for severe alopecia areata on 13 June 2022.
 [^ritlecitinib]: "FDA approves second Yale-researched treatment for alopecia areata." Yale News, 26 June 2023. [news.yale.edu](https://news.yale.edu/2023/06/26/fda-approves-second-yale-researched-treatment-alopecia-areata). (Ritlecitinib, brand name Litfulo, for ages 12 and up.)
+[^oscars]: "What's behind the slap Will Smith gave Chris Rock at the Oscars." *NPR*, 28 March 2022. [npr.org](https://www.npr.org/2022/03/28/1089133964/whats-behind-the-slap-will-smith-gave-chris-rock-at-the-oscars). (Jada Pinkett Smith has spoken publicly about living with alopecia areata.)
